@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SecurePYME - Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>SecurePYME - Login</h1>
+    <form id="loginForm" method="POST" action="/login">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      
+      <label for="phone">Teléfono:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" pattern="^\+?\d{9,15}$" required />
+      
+      <button type="submit">Entrar</button>
+    </form>
+    <div id="message"></div>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
