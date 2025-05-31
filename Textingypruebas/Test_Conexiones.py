@@ -14,6 +14,6 @@ coleccion = db["usuarios"]
 
 # Prueba de inserción
 usuario = {"nombre": "Pablo", "email": "pablogo@msmk.university"}
-resultado = coleccion.insert_one(usuario)
+resultado = coleccion.insert_many(usuario)
 
 print(f"Usuario insertado con ID: {resultado.inserted_id}")
